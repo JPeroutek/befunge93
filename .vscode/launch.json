@@ -19,7 +19,7 @@
                     "kind": "bin"
                 }
             },
-            "args": ["./examples/hello_world2.b93"],
+            "args": ["./examples/factorial.b93"],
             "cwd": "${workspaceFolder}"
         },
         {
