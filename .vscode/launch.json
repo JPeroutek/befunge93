@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'befunge93'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=befunge93",
+                    "--package=befunge93"
+                ],
+                "filter": {
+                    "name": "befunge93",
+                    "kind": "bin"
+                }
+            },
+            "args": ["./examples/hello_world2.b93"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'befunge93'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=befunge93",
+                    "--package=befunge93"
+                ],
+                "filter": {
+                    "name": "befunge93",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
