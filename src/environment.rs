@@ -124,6 +124,9 @@ impl Befunge93Interpreter for Environment {
     }
 
     fn pop(&mut self) -> usize {
+        if self.sp == 0 {
+            return 0;
+        } 
         let value = self.stack[self.sp];
         self.sp -= 1;
         value
@@ -240,9 +243,6 @@ impl Befunge93Interpreter for Environment {
                 self.string_mode = !self.string_mode;
             },
             ':' => {
-                if self.sp == 0 {
-                    self.push(0);
-                } 
                 let a = self.pop();
                 self.push(a);
                 self.push(a);
